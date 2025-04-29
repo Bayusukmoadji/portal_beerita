@@ -44,6 +44,11 @@ body {
 .garis {
   border-top: 1px solid black;
   border-bottom: 1px solid black;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 999;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* Nav pills styling */
@@ -190,7 +195,7 @@ body {
 }
 
 .overlay-gradient {
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+  background: linear-gradient(to top, rgba(0, 0, 0, 1), transparent);
 }
 
 .headline-img {
@@ -199,4 +204,12 @@ body {
 }
 /* ================== */
 /* content Styling end*/
+/* ================== */
+
+/* ================== */
+/* footer styleng*/
+/* ================== */
+
+/* ================== */
+/* footer Styling end*/
 /* ================== */
