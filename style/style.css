@@ -111,10 +111,22 @@ body {
     width: 100%;
   }
 
-  /* Nav menu scroll horizontal */
-  .nav-pills {
-    flex-wrap: nowrap;
+  /* Pembungkus menu scroll */
+  .nav-scroll-wrapper {
     overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .nav-scroll-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Menu scroll horizontal */
+  .nav-pills {
+    display: flex;
+    flex-wrap: nowrap;
+    width: max-content;
     padding-bottom: 10px;
   }
 
@@ -153,4 +165,18 @@ body {
     justify-content: flex-end;
     align-items: center;
   }
+
+  .nav-scroll-wrapper {
+    overflow: visible;
+  }
+
+  .nav-pills {
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
 }
+
+/* ================== */
+/* Navbar Styling end*/
+/* ================== */
