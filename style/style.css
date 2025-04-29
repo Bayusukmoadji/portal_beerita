@@ -180,3 +180,23 @@ body {
 /* ================== */
 /* Navbar Styling end*/
 /* ================== */
+
+/* ================== */
+/* content Styling*/
+/* ================== */
+.fixed-img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.overlay-gradient {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+}
+
+.headline-img {
+  height: 500px;
+  object-fit: cover;
+}
+/* ================== */
+/* content Styling end*/
+/* ================== */
