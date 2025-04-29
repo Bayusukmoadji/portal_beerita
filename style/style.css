@@ -3,7 +3,7 @@ body {
   background-color: #000;
 }
 /* ================== */
-/* navbar */
+/* Navbar Styling */
 /* ================== */
 
 /* Tombol Daftar */
@@ -34,17 +34,19 @@ body {
   background-color: #249ee3;
 }
 
+/* Shadow effect */
 .navbar .btn-register.shadow-lg,
 .navbar .btn-signin.shadow-lg {
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Garis pemisah pada menu */
+/* Garis pemisah menu */
 .garis {
   border-top: 1px solid black;
+  border-bottom: 1px solid black;
 }
 
-/* Styling nav list */
+/* Nav pills styling */
 .nav-pills .nav-link {
   color: black;
   font-weight: 200;
@@ -55,10 +57,7 @@ body {
   padding-bottom: 3px;
 }
 
-.nav-pills .nav-link:hover {
-  color: #ff66c4;
-}
-
+.nav-pills .nav-link:hover,
 .nav-pills .nav-link.active {
   color: #ff66c4;
 }
@@ -71,57 +70,70 @@ body {
   margin-right: 12px;
 }
 
-/* Styling untuk search bar */
+/* Search bar */
 .navbar .form-control {
   border: 1px solid black;
 }
 
+/* Logo styling */
+.logo-img {
+  height: 45px;
+}
+
 /* ================== */
-/* navbar end */
+/* Responsive */
 /* ================== */
 
-/* Responsif untuk tampilan di mobile */
 @media (max-width: 768px) {
-  /* Memposisikan Search Bar di tengah */
-  .navbar .col-12.col-lg-4.d-flex {
-    justify-content: center;
-    margin-bottom: 10px;
-  }
-
-  /* Memposisikan logo di pojok kiri */
+  /* Logo di kiri */
   .navbar .navbar-brand {
-    text-align: left;
-    margin-top: 20px;
-    margin-left: 10px;
+    margin-left: 0;
   }
 
-  /* Mengatur tombol di pojok kanan */
-  .navbar .col-12.col-lg-4.d-flex:last-child {
-    display: flex;
+  /* Tombol di kanan */
+  .navbar .col-6.col-lg-4.d-flex.justify-content-end {
     justify-content: flex-end;
   }
 
-  /* Menjaga jarak antara tombol dan logo */
+  /* Ukuran tombol */
   .navbar .btn-register,
   .navbar .btn-signin {
     font-size: 12px;
-    padding: 6px 12px;
+    padding: 6px 10px;
   }
 
+  /* Search bar di bawah */
+  .navbar .col-12.col-lg-4.d-flex {
+    justify-content: center;
+  }
+
+  .navbar .form-control {
+    width: 100%;
+  }
+
+  /* Nav menu scroll horizontal */
   .nav-pills {
-    flex-direction: column;
-    gap: 10px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 10px;
   }
 
   .nav-pills .nav-item {
-    text-align: center;
-    width: 100%;
+    flex: 0 0 auto;
+    margin-right: 10px;
+  }
+
+  .nav-pills .nav-link {
+    white-space: nowrap;
+    font-size: 14px;
+  }
+
+  .nl {
+    padding-top: 10px;
   }
 }
 
-/* Untuk tampilan Desktop */
 @media (min-width: 769px) {
-  /* Memposisikan search bar di tengah */
   .navbar .col-12.col-lg-4.d-flex {
     justify-content: center;
   }
@@ -131,13 +143,11 @@ body {
     margin-left: 0;
   }
 
-  /* Memposisikan logo di pojok kiri */
   .navbar .navbar-brand {
     text-align: left;
     margin-top: 20px;
   }
 
-  /* Mengatur tombol di pojok kanan */
   .navbar .col-12.col-lg-4.d-flex:last-child {
     display: flex;
     justify-content: flex-end;

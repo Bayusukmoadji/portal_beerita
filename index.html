@@ -24,8 +24,29 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light py-3 pt-2 pb-2">
       <div class="container">
         <div class="row w-100 align-items-center">
+          <!-- Logo di kiri -->
+          <div
+            class="col-6 col-lg-4 d-flex align-items-center order-1 order-lg-1"
+          >
+            <a class="m-0 navbar-brand" href="#">
+              <img
+                src="img/logo.png"
+                alt="Portal Berita Logo"
+                class="logo-img"
+              />
+            </a>
+          </div>
+
+          <!-- Tombol di kanan -->
+          <div
+            class="col-6 col-lg-4 d-flex justify-content-end align-items-center order-2 order-lg-3"
+          >
+            <a href="#" class="btn btn-register me-2 shadow-lg">Daftar</a>
+            <a href="#" class="btn btn-signin shadow-lg">Masuk</a>
+          </div>
+
           <!-- Search Bar -->
-          <div class="col-12 col-lg-4 d-flex mb-3 mb-lg-0">
+          <div class="col-12 col-lg-4 d-flex mt-3 mt-lg-0 order-3 order-lg-2">
             <form class="d-flex w-100 position-relative">
               <input
                 class="form-control rounded-cover ps-5"
@@ -38,21 +59,6 @@
               ></i>
             </form>
           </div>
-
-          <!-- Logo -->
-          <div class="col-12 col-lg-4 text-center mb-3 mb-lg-0">
-            <a class="ms-5 ps-5 navbar-brand" href="#">
-              <img src="img/logo.png" alt="Portal Berita Logo" height="60" />
-            </a>
-          </div>
-
-          <!-- Button -->
-          <div
-            class="col-12 col-lg-4 d-flex justify-content-center justify-content-lg-end"
-          >
-            <a href="#" class="btn btn-register me-2 shadow-lg">Daftar</a>
-            <a href="#" class="btn btn-signin shadow-lg">Masuk</a>
-          </div>
         </div>
       </div>
     </nav>
@@ -60,7 +66,7 @@
     <!-- Menu -->
     <div class="bg-white shadow-sm garis">
       <div class="container">
-        <ul class="nav nav-pills justify-content-center gap-2">
+        <ul class="nav nav-pills justify-content-center gap-2 nl">
           <li class="nav-item"><a class="nav-link" href="#">News</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Teknologi</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Sport</a></li>
