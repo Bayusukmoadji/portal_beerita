@@ -202,6 +202,14 @@ body {
   height: 500px;
   object-fit: cover;
 }
+
+.card-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* tampilkan maksimal 3 baris */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 /* ================== */
 /* content Styling end*/
 /* ================== */
