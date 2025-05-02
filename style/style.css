@@ -205,10 +205,11 @@ body {
 
 .card-text {
   display: -webkit-box;
-  -webkit-line-clamp: 3; /* tampilkan maksimal 3 baris */
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  text-overflow: ellipsis;
+  display: box;
+  line-clamp: 3;
 }
 /* ================== */
 /* content Styling end*/
