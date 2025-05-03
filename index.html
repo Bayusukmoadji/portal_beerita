@@ -15,7 +15,7 @@
       rel="stylesheet"
     />
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
 
     <link
       rel="stylesheet"
@@ -26,7 +26,10 @@
     <!-- ============================= -->
     <!-- Navbar -->
     <!-- ============================ -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light py-3 pt-2 pb-2">
+    <nav
+      id="navlistWrapper"
+      class="navbar navbar-expand-lg navbar-light bg-light py-3 pt-2 pb-2"
+    >
       <div class="container">
         <div class="row w-100 align-items-center">
           <!-- Logo di kiri -->
@@ -35,7 +38,7 @@
           >
             <a class="m-0 navbar-brand" href="#">
               <img
-                src="img/logo.png"
+                src="assets/img/logo.png"
                 alt="Portal Berita Logo"
                 class="logo-img"
               />
@@ -46,8 +49,10 @@
           <div
             class="col-6 col-lg-4 d-flex justify-content-end align-items-center order-2 order-lg-3"
           >
-            <a href="#" class="btn btn-register me-2 shadow-lg">Daftar</a>
-            <a href="#" class="btn btn-signin shadow-lg">Masuk</a>
+            <a href="auth/regist.html" class="btn btn-register me-2 shadow-lg"
+              >Daftar</a
+            >
+            <a href="auth/login.html" class="btn btn-signin shadow-lg">Masuk</a>
           </div>
 
           <!-- Search Bar -->
@@ -76,16 +81,36 @@
         <!-- Pembungkus scroll -->
         <div class="nav-scroll-wrapper">
           <ul class="nav nav-pills gap-2 nl">
-            <li class="nav-item"><a class="nav-link" href="#">News</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Teknologi</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Sport</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Politik</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Otomotif</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Lifestyle</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Tren</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Health</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Property</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Travel</a></li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/teknologi.html">Teknologi</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/sport.html">Sport</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/politik.html">Politik</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/otomotif.html">Otomotif</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/lifestyle.html">Lifestyle</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/tren.html">Tren</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/health.html">Health</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/property.html">Property</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/travel.html">Travel</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -113,7 +138,7 @@
                 <div class="carousel-item active">
                   <div class="card bg-dark text-white border-0">
                     <img
-                      src="img/wr.png"
+                      src="assets/img/wr.png"
                       class="card-img headline-img"
                       alt="Headline 1"
                     />
@@ -135,7 +160,7 @@
                 <div class="carousel-item">
                   <div class="card bg-dark text-white border-0">
                     <img
-                      src="img/patung.png"
+                      src="assets/img/patung.png"
                       class="card-img headline-img"
                       alt="Headline 2"
                     />
@@ -158,7 +183,7 @@
                 <div class="carousel-item">
                   <div class="card bg-dark text-white border-0">
                     <img
-                      src="img/barca.jpg"
+                      src="assets/img/barca.jpg"
                       class="card-img headline-img"
                       alt="Headline 3"
                     />
@@ -206,7 +231,7 @@
                   class="card bg-dark text-white border-0 rounded-4 overflow-hidden"
                 >
                   <img
-                    src="img/persib.jpeg"
+                    src="assets/img/persib.jpeg"
                     class="card-img-top fixed-img"
                     alt="Berita"
                   />
@@ -227,7 +252,7 @@
                   class="card bg-dark text-white border-0 rounded-4 overflow-hidden h-100 d-flex flex-column"
                 >
                   <img
-                    src="img/barca.jpg"
+                    src="assets/img/barca.jpg"
                     class="card-img-top fixed-img"
                     alt="Berita"
                   />
@@ -253,7 +278,7 @@
                   class="card bg-dark text-white border-0 rounded-4 overflow-hidden h-100 d-flex flex-column"
                 >
                   <img
-                    src="img/patung.png"
+                    src="assets/img/patung.png"
                     class="card-img-top fixed-img"
                     alt="Berita"
                   />
@@ -279,7 +304,7 @@
                   class="card bg-dark text-white border-0 rounded-4 overflow-hidden h-100 d-flex flex-column"
                 >
                   <img
-                    src="img/vape.png"
+                    src="assets/img/vape.png"
                     class="card-img-top fixed-img"
                     alt="Berita"
                   />
@@ -305,7 +330,7 @@
                   class="card bg-dark text-white border-0 rounded-4 overflow-hidden h-100 d-flex flex-column"
                 >
                   <img
-                    src="img/wr.png"
+                    src="assets/img/wr.png"
                     class="card-img-top fixed-img"
                     alt="Berita"
                   />
@@ -331,7 +356,7 @@
                   class="card bg-dark text-white border-0 rounded-4 overflow-hidden h-100 d-flex flex-column"
                 >
                   <img
-                    src="img/persib.jpeg"
+                    src="assets/img/persib.jpeg"
                     class="card-img-top fixed-img"
                     alt="Berita"
                   />
@@ -362,7 +387,7 @@
                 class="card bg-dark text-white border-0 rounded-4 overflow-hidden"
               >
                 <img
-                  src="img/persib.jpeg"
+                  src="assets/img/persib.jpeg"
                   class="card-img-top fixed-img"
                   alt="Populer"
                 />
@@ -385,7 +410,7 @@
                 class="card bg-dark text-white border-0 rounded-4 overflow-hidden"
               >
                 <img
-                  src="img/barca.jpg"
+                  src="assets/img/barca.jpg"
                   class="card-img-top fixed-img"
                   alt="Populer"
                 />
@@ -406,7 +431,7 @@
                 class="card bg-dark text-white border-0 rounded-4 overflow-hidden"
               >
                 <img
-                  src="img/patung.png"
+                  src="assets/img/patung.png"
                   class="card-img-top fixed-img"
                   alt="Populer"
                 />
@@ -427,7 +452,7 @@
                 class="card bg-dark text-white border-0 rounded-4 overflow-hidden"
               >
                 <img
-                  src="img/vape.png"
+                  src="assets/img/vape.png"
                   class="card-img-top fixed-img"
                   alt="Populer"
                 />
@@ -448,7 +473,7 @@
                 class="card bg-dark text-white border-0 rounded-4 overflow-hidden"
               >
                 <img
-                  src="img/wr.png"
+                  src="assets/img/wr.png"
                   class="card-img-top fixed-img"
                   alt="Populer"
                 />
@@ -489,13 +514,13 @@
               class="d-flex align-items-center justify-content-center justify-content-md-start gap-2 mb-2 ms-md-5"
             >
               <img
-                src="img/logo.png"
+                src="assets/img/logo.png"
                 alt="Winnicode Logo"
                 class="img-fluid"
                 style="max-width: 150px"
               />
               <img
-                src="img/km.png"
+                src="assets/img/km.png"
                 alt="Kampus Merdeka Logo"
                 class="img-fluid"
                 style="max-width: 80px"
@@ -542,20 +567,30 @@
                     <a href="#" class="text-dark text-decoration-none">News</a>
                   </li>
                   <li>
-                    <a href="#" class="text-dark text-decoration-none"
+                    <a
+                      href="pages/teknologi.html"
+                      class="text-dark text-decoration-none"
                       >Teknologi</a
                     >
                   </li>
                   <li>
-                    <a href="#" class="text-dark text-decoration-none">Sport</a>
+                    <a
+                      href="pages/sport.html"
+                      class="text-dark text-decoration-none"
+                      >Sport</a
+                    >
                   </li>
                   <li>
-                    <a href="#" class="text-dark text-decoration-none"
+                    <a
+                      href="pages/politik.html"
+                      class="text-dark text-decoration-none"
                       >Politik</a
                     >
                   </li>
                   <li>
-                    <a href="#" class="text-dark text-decoration-none"
+                    <a
+                      href="pages/otomotif.html"
+                      class="text-dark text-decoration-none"
                       >Otomotif</a
                     >
                   </li>
@@ -564,25 +599,37 @@
               <div class="col-6 listfoot">
                 <ul class="list-unstyled">
                   <li>
-                    <a href="#" class="text-dark text-decoration-none"
+                    <a
+                      href="pages/lifestyle.html"
+                      class="text-dark text-decoration-none"
                       >Lifestyle</a
                     >
                   </li>
                   <li>
-                    <a href="#" class="text-dark text-decoration-none">Tren</a>
+                    <a
+                      href="pages/tren.html"
+                      class="text-dark text-decoration-none"
+                      >Tren</a
+                    >
                   </li>
                   <li>
-                    <a href="#" class="text-dark text-decoration-none"
+                    <a
+                      href="pages/health.html"
+                      class="text-dark text-decoration-none"
                       >Health</a
                     >
                   </li>
                   <li>
-                    <a href="#" class="text-dark text-decoration-none"
+                    <a
+                      href="pages/property.html"
+                      class="text-dark text-decoration-none"
                       >Property</a
                     >
                   </li>
                   <li>
-                    <a href="#" class="text-dark text-decoration-none"
+                    <a
+                      href="pages/travel.html"
+                      class="text-dark text-decoration-none"
                       >Travel</a
                     >
                   </li>
@@ -609,6 +656,7 @@
 
         <!-- Bootstrap JS dan Icons -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/script.js"></script>
 
         <link
           rel="stylesheet"
