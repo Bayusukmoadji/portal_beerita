@@ -210,6 +210,10 @@ body {
   display: box;
   line-clamp: 3;
 }
+
+a {
+  text-decoration: none;
+}
 /* ================== */
 /* content Styling end*/
 /* ================== */
