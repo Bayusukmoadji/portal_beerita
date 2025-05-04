@@ -237,6 +237,10 @@ body {
 .card {
   overflow: hidden; /* Membatasi zoom dalam card */
 }
+
+a {
+  text-decoration: none;
+}
 /* ================== */
 /* content Styling end*/
 /* ================== */
