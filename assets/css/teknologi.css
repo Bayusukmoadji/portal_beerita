@@ -1,0 +1,252 @@
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #000;
+}
+
+.card-text {
+  font-size: 0.9rem;
+}
+
+/* ================== */
+/* Navbar Styling */
+/* ================== */
+/* Tombol Daftar */
+.navbar .btn-register {
+  background-color: #ff66c4;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 10px;
+  border: none;
+  padding: 10px 20px;
+}
+
+.navbar .btn-register:hover {
+  background-color: #e055b1;
+}
+
+/* Tombol Masuk */
+.navbar .btn-signin {
+  background-color: #38b6ff;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 10px;
+  border: none;
+  padding: 10px 20px;
+}
+
+.navbar .btn-signin:hover {
+  background-color: #249ee3;
+}
+
+/* Shadow effect */
+.navbar .btn-register.shadow-lg,
+.navbar .btn-signin.shadow-lg {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Garis pemisah menu */
+.garis {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 999;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Nav pills styling */
+.nav-pills .nav-link {
+  color: black;
+  font-weight: 200;
+  font-size: 15px;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.nav-pills .nav-link:hover,
+.nav-pills .nav-link.active {
+  color: #ff66c4;
+  background-color: transparent;
+}
+
+.nav-pills {
+  margin-bottom: 0;
+}
+
+.nav-pills .nav-item {
+  margin-right: 12px;
+}
+
+/* Search bar */
+.navbar .form-control {
+  border: 1px solid black;
+}
+
+/* Logo styling */
+.logo-img {
+  height: 45px;
+}
+/* ================== */
+/* Responsive */
+/* ================== */
+
+@media (max-width: 768px) {
+  /* Logo di kiri */
+  .navbar .navbar-brand {
+    margin-left: 0;
+  }
+
+  /* Tombol di kanan */
+  .navbar .col-6.col-lg-4.d-flex.justify-content-end {
+    justify-content: flex-end;
+  }
+
+  /* Ukuran tombol */
+  .navbar .btn-register,
+  .navbar .btn-signin {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  /* Search bar di bawah */
+  .navbar .col-12.col-lg-4.d-flex {
+    justify-content: center;
+  }
+
+  .navbar .form-control {
+    width: 100%;
+  }
+
+  /* Pembungkus menu scroll */
+  .nav-scroll-wrapper {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .nav-scroll-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Menu scroll horizontal */
+  .nav-pills {
+    display: flex;
+    flex-wrap: nowrap;
+    width: max-content;
+    padding-bottom: 10px;
+  }
+
+  .nav-pills .nav-item {
+    flex: 0 0 auto;
+    margin-right: 10px;
+  }
+
+  .nav-pills .nav-link {
+    white-space: nowrap;
+    font-size: 14px;
+  }
+
+  .nl {
+    padding-top: 10px;
+  }
+}
+
+@media (min-width: 769px) {
+  .navbar .col-12.col-lg-4.d-flex {
+    justify-content: center;
+  }
+
+  .navbar-brand {
+    padding-left: 0;
+    margin-left: 0;
+  }
+
+  .navbar .navbar-brand {
+    text-align: left;
+    margin-top: 20px;
+  }
+
+  .navbar .col-12.col-lg-4.d-flex:last-child {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .nav-scroll-wrapper {
+    overflow: visible;
+  }
+
+  .nav-pills {
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
+
+/* ================== */
+/* Navbar Styling end*/
+/* ================== */
+
+/* ================== */
+/* content Styling*/
+/* ================== */
+
+.object-fit-cover {
+  object-fit: cover;
+}
+
+.gradient-overlay {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0));
+  height: 100%;
+  pointer-events: none;
+  display: flex;
+  align-items: flex-end;
+  padding: 1.5rem;
+}
+
+.card-img-top {
+  object-fit: cover;
+  height: 200px;
+  transition: transform 0.5s ease;
+}
+
+.card-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  display: box;
+  line-clamp: 3;
+}
+
+.card:hover .card-img-top {
+  transform: scale(1.07);
+}
+
+.carousel-item img {
+  transition: transform 0.5s ease;
+}
+
+.carousel-item:hover img {
+  transform: scale(1.07);
+}
+
+.card {
+  overflow: hidden; /* Membatasi zoom dalam card */
+}
+/* ================== */
+/* content Styling end*/
+/* ================== */
+
+/* ================== */
+/* footer styling*/
+/* ================== */
+.listfoot a:hover {
+  color: #ff66c4 !important;
+}
+/* ================== */
+/* footer Styling end*/
+/* ================== */
