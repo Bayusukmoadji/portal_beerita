@@ -44,17 +44,20 @@
             <h4 class="fw-bold mb-2">SIGN UP</h4>
             <p class="mb-3">
               Please fill out the form to join.<br />Already have an account?
-              <strong>Sign In</strong>.
+              <a href="login.html"><strong>Sign In</strong></a
+              >.
             </p>
 
-            <form>
+            <form action="login.html" method="get">
               <div class="mb-2">
                 <label for="name" class="form-label">Name</label>
                 <input
                   type="text"
                   id="name"
+                  name="name"
                   class="form-control"
                   placeholder="Enter your name"
+                  required
                 />
               </div>
               <div class="mb-2">
@@ -62,8 +65,10 @@
                 <input
                   type="email"
                   id="email"
+                  name="email"
                   class="form-control"
                   placeholder="Enter your email"
+                  required
                 />
               </div>
               <div class="mb-3">
@@ -71,8 +76,10 @@
                 <input
                   type="password"
                   id="password"
+                  name="password"
                   class="form-control"
                   placeholder="Create password"
+                  required
                 />
               </div>
               <div class="btn-wrapper">

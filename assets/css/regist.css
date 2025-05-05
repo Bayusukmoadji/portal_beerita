@@ -84,6 +84,11 @@ body {
   margin: 0 !important;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
 @media (min-width: 768px) {
   .form-section {
     flex: 0 0 63%;
