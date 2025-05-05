@@ -16,7 +16,7 @@ body {
 }
 
 .navbar .btn-register:hover {
-  background-color: #e055b1;
+  background-color: #a84286;
 }
 
 /* Tombol Masuk */
@@ -30,7 +30,7 @@ body {
 }
 
 .navbar .btn-signin:hover {
-  background-color: #249ee3;
+  background-color: #1e7eb6;
 }
 
 /* Shadow effect */
