@@ -1,0 +1,258 @@
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #000;
+}
+/* ================== */
+/* Navbar Styling */
+/* ================== */
+/* Tombol Daftar */
+.navbar .btn-register {
+  background-color: #ff66c4;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 10px;
+  border: none;
+  padding: 10px 20px;
+}
+
+.navbar .btn-register:hover {
+  background-color: #a84286;
+}
+
+/* Tombol Masuk */
+.navbar .btn-signin {
+  background-color: #38b6ff;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 10px;
+  border: none;
+  padding: 10px 20px;
+}
+
+.navbar .btn-signin:hover {
+  background-color: #1e7eb6;
+}
+
+/* Shadow effect */
+.navbar .btn-register.shadow-lg,
+.navbar .btn-signin.shadow-lg {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Garis pemisah menu */
+.garis {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 999;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Nav pills styling */
+.nav-pills .nav-link {
+  color: black;
+  font-weight: 200;
+  font-size: 15px;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.nav-pills .nav-link:hover,
+.nav-pills .nav-link.active {
+  color: #ff66c4;
+  background-color: transparent;
+}
+
+.nav-pills {
+  margin-bottom: 0;
+}
+
+.nav-pills .nav-item {
+  margin-right: 12px;
+}
+
+/* Search bar */
+.navbar .form-control {
+  border: 1px solid black;
+}
+
+/* Logo styling */
+.logo-img {
+  height: 45px;
+}
+/* ================== */
+/* Responsive */
+/* ================== */
+
+@media (max-width: 768px) {
+  /* Logo di kiri */
+  .navbar .navbar-brand {
+    margin-left: 0;
+  }
+
+  /* Tombol di kanan */
+  .navbar .col-6.col-lg-4.d-flex.justify-content-end {
+    justify-content: flex-end;
+  }
+
+  /* Ukuran tombol */
+  .navbar .btn-register,
+  .navbar .btn-signin {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  /* Search bar di bawah */
+  .navbar .col-12.col-lg-4.d-flex {
+    justify-content: center;
+  }
+
+  .navbar .form-control {
+    width: 100%;
+  }
+
+  /* Pembungkus menu scroll */
+  .nav-scroll-wrapper {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .nav-scroll-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Menu scroll horizontal */
+  .nav-pills {
+    display: flex;
+    flex-wrap: nowrap;
+    width: max-content;
+    padding-bottom: 10px;
+  }
+
+  .nav-pills .nav-item {
+    flex: 0 0 auto;
+    margin-right: 10px;
+  }
+
+  .nav-pills .nav-link {
+    white-space: nowrap;
+    font-size: 14px;
+  }
+
+  .nl {
+    padding-top: 10px;
+  }
+}
+
+@media (min-width: 769px) {
+  .navbar .col-12.col-lg-4.d-flex {
+    justify-content: center;
+  }
+
+  .navbar-brand {
+    padding-left: 0;
+    margin-left: 0;
+  }
+
+  .navbar .navbar-brand {
+    text-align: left;
+    margin-top: 20px;
+  }
+
+  .navbar .col-12.col-lg-4.d-flex:last-child {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .nav-scroll-wrapper {
+    overflow: visible;
+  }
+
+  .nav-pills {
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
+
+/* ================== */
+/* Navbar Styling end*/
+/* ================== */
+
+/* ================== */
+/* content Styling*/
+/* ================== */
+.line {
+  border-bottom: 2px solid #fff;
+}
+
+/* Custom CSS for Comments and Popular Articles */
+
+/* Style for comment box */
+.comment-box {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+/* Comment header style */
+.comment-header {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Style for reply link */
+.comment-reply {
+  font-size: 0.9rem;
+  color: #888;
+  cursor: pointer;
+}
+
+.comment-reply:hover {
+  color: #007bff;
+}
+
+/* Style for popular article images */
+.popular-img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Style for popular article card */
+.popular-card {
+  margin-bottom: 20px;
+}
+
+/* Button style */
+.btn-pink {
+  background-color: #d63384;
+  border-color: #d63384;
+  color: white;
+}
+
+.btn-pink:hover {
+  background-color: #c02570;
+  border-color: #c02570;
+}
+
+/* ================== */
+/* content Styling end*/
+/* ================== */
+
+/* ================== */
+/* footer styling*/
+/* ================== */
+.listfoot a:hover {
+  color: #ff66c4 !important;
+}
+/* ================== */
+/* footer Styling end*/
+/* ================== */
