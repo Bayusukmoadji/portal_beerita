@@ -227,6 +227,13 @@ a {
   transform: scale(1.07);
 }
 
+/* ========= scroll bar ========= */
+.popular-scroll-container {
+  max-height: 1113px;
+  overflow-y: auto;
+  border-radius: 20px;
+}
+
 /* ================== */
 /* content Styling end*/
 /* ================== */

@@ -1,6 +1,6 @@
 body {
   font-family: "Inter", sans-serif;
-  background-color: #000;
+  background-color: black;
 }
 /* ================== */
 /* Navbar Styling */
@@ -188,6 +188,8 @@ body {
 /* ================== */
 /* content Styling*/
 /* ================== */
+
+/* section 1 */
 .line {
   border-bottom: 2px solid #fff;
 }
@@ -207,6 +209,58 @@ body {
     width: 100%;
   }
 }
+/* section 1 en */
+
+/* section 2 */
+
+/* section 2 end */
+
+/* secrion 3 */
+.fixed-img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.overlay-gradient {
+  background: linear-gradient(to top, rgba(0, 0, 0, 1), transparent);
+}
+
+.card-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  display: box;
+  line-clamp: 3;
+}
+
+a {
+  text-decoration: none;
+}
+
+.zoom-img-container {
+  overflow: hidden;
+}
+
+.zoom-img-container img {
+  transition: transform 0.4s ease;
+}
+
+.zoom-img-container:hover img {
+  transform: scale(1.07);
+}
+
+/* ========= scroll bar ========= */
+.popular-scroll-container {
+  max-height: 613px;
+  overflow-y: auto;
+  border-radius: 20px;
+}
+
+/* ========= scroll bar end ========= */
+
+/* secrion 3 end */
+
 /* ================== */
 /* content Styling end*/
 /* ================== */
@@ -224,6 +278,8 @@ body {
 /* ================== */
 /* responsive mobile*/
 /* ================== */
+
+/* section 1 */
 @media (max-width: 576px) {
   /* animasi typing */
   .typing {
@@ -245,6 +301,7 @@ body {
     font-size: 14px;
   }
 }
+/* section 1 end */
 
 /* ================== */
 /* responsive mobile end*/
