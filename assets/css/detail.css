@@ -192,57 +192,21 @@ body {
   border-bottom: 2px solid #fff;
 }
 
-/* Custom CSS for Comments and Popular Articles */
-
-/* Style for comment box */
-.comment-box {
-  background-color: #f8f9fa;
-  border-radius: 8px;
-  padding: 15px;
-  margin-bottom: 15px;
+/* ======== adnimasi typing =========== */
+.typing {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  max-width: 100%;
+  animation: typing 30s steps(300) 1s forwards;
 }
 
-/* Comment header style */
-.comment-header {
-  font-weight: bold;
-  margin-bottom: 10px;
+@keyframes typing {
+  to {
+    width: 100%;
+  }
 }
-
-/* Style for reply link */
-.comment-reply {
-  font-size: 0.9rem;
-  color: #888;
-  cursor: pointer;
-}
-
-.comment-reply:hover {
-  color: #007bff;
-}
-
-/* Style for popular article images */
-.popular-img {
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
-}
-
-/* Style for popular article card */
-.popular-card {
-  margin-bottom: 20px;
-}
-
-/* Button style */
-.btn-pink {
-  background-color: #d63384;
-  border-color: #d63384;
-  color: white;
-}
-
-.btn-pink:hover {
-  background-color: #c02570;
-  border-color: #c02570;
-}
-
 /* ================== */
 /* content Styling end*/
 /* ================== */
@@ -255,4 +219,33 @@ body {
 }
 /* ================== */
 /* footer Styling end*/
+/* ================== */
+
+/* ================== */
+/* responsive mobile*/
+/* ================== */
+@media (max-width: 576px) {
+  /* animasi typing */
+  .typing {
+    animation: typing-mobile 12s steps(120) 0.5s forwards;
+  }
+
+  @keyframes typing-mobile {
+    to {
+      width: 100%;
+    }
+  }
+  /* responsive mobile end*/
+
+  .judul {
+    font-size: 18px;
+  }
+
+  .desk {
+    font-size: 14px;
+  }
+}
+
+/* ================== */
+/* responsive mobile end*/
 /* ================== */
