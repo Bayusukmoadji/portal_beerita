@@ -1,6 +1,6 @@
 body {
   font-family: "Inter", sans-serif;
-  background-color: black;
+  background-color: #000;
 }
 /* ================== */
 /* Navbar Styling */
@@ -185,70 +185,59 @@ body {
 /* Navbar Styling end*/
 /* ================== */
 
-/* ================== */
-/* content Styling*/
-/* ================== */
-
-/* section 1 */
-.line {
-  border-bottom: 2px solid #fff;
+/* Styling for the carousel and grid cards */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  padding: 0;
 }
 
-/* ======== adnimasi typing =========== */
-.typing {
-  display: inline-block;
-  overflow: hidden;
-  white-space: nowrap;
-  width: 0;
-  max-width: 100%;
-  animation: typing 30s steps(300) 1s forwards;
+h1,
+h2 {
+  color: #333;
 }
 
-@keyframes typing {
-  to {
-    width: 100%;
-  }
-}
-/* section 1 en */
-
-/* section 2 */
-.comment-section {
-  background-color: #000;
+.article {
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  padding: 10px;
 }
 
-.btn-komen {
-  background-color: #ff66c4;
-  color: white;
-  font-weight: 600;
+.article h3 {
+  margin: 0;
+  font-size: 18px;
 }
 
-.btn-komen:hover {
-  background-color: #e055b1;
-  color: white;
+.article p {
+  font-size: 14px;
 }
 
-.avatar {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
+.article a {
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+.article a:hover {
+  text-decoration: underline;
+}
+
+.object-fit-cover {
   object-fit: cover;
 }
 
-.comment-box {
-  border-bottom: 1px solid #444;
-  padding-bottom: 1rem;
+.gradient-overlay {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0));
+  height: 100%;
+  pointer-events: none;
+  display: flex;
+  align-items: flex-end;
+  padding: 1.5rem;
 }
 
-/* section 2 end */
-
-/* secrion 3 */
-.fixed-img {
+.card-img-top {
+  object-fit: cover;
   height: 200px;
-  object-fit: cover;
-}
-
-.overlay-gradient {
-  background: linear-gradient(to top, rgba(0, 0, 0, 1), transparent);
+  transition: transform 0.5s ease;
 }
 
 .card-text {
@@ -260,34 +249,25 @@ body {
   line-clamp: 3;
 }
 
-a {
-  text-decoration: none;
-}
-
-.zoom-img-container {
-  overflow: hidden;
-}
-
-.zoom-img-container img {
-  transition: transform 0.4s ease;
-}
-
-.zoom-img-container:hover img {
+.card:hover .card-img-top {
   transform: scale(1.07);
 }
 
-/* ========= scroll bar ========= */
-.popular-scroll-container {
-  max-height: 613px;
-  overflow-y: auto;
-  border-radius: 20px;
+.carousel-item img {
+  transition: transform 0.5s ease;
 }
-/* ========= scroll bar end ========= */
-/* secrion 3 end */
 
-/* ================== */
-/* content Styling end*/
-/* ================== */
+.carousel-item:hover img {
+  transform: scale(1.07);
+}
+
+.card {
+  overflow: hidden; /* Membatasi zoom dalam card */
+}
+
+a {
+  text-decoration: none;
+}
 
 /* ================== */
 /* footer styling*/
@@ -297,36 +277,4 @@ a {
 }
 /* ================== */
 /* footer Styling end*/
-/* ================== */
-
-/* ================== */
-/* responsive mobile*/
-/* ================== */
-
-/* section 1 */
-@media (max-width: 576px) {
-  /* animasi typing */
-  .typing {
-    animation: typing-mobile 12s steps(120) 0.5s forwards;
-  }
-
-  @keyframes typing-mobile {
-    to {
-      width: 100%;
-    }
-  }
-  /* responsive mobile end*/
-
-  .judul {
-    font-size: 18px;
-  }
-
-  .desk {
-    font-size: 14px;
-  }
-}
-/* section 1 end */
-
-/* ================== */
-/* responsive mobile end*/
 /* ================== */

@@ -220,6 +220,79 @@
     <!-- ================================
     section 2
     ================================ -->
+    <!-- Section Komentar -->
+    <section class="comment-section text-white">
+      <div class="container py-4">
+        <!-- Tombol Tambah Komentar -->
+        <button
+          class="btn btn-komen mb-4"
+          data-bs-toggle="collapse"
+          data-bs-target="#formKomentar"
+          aria-expanded="false"
+          aria-controls="formKomentar"
+        >
+          <i class="bi bi-chat-left-text"></i> Tambahkan Komentar
+        </button>
+
+        <!-- Form Komentar (Disembunyikan awalnya) -->
+        <div class="collapse mb-4" id="formKomentar">
+          <form>
+            <div class="mb-3">
+              <label for="nama" class="form-label">Nama</label>
+              <input
+                type="text"
+                class="form-control"
+                id="nama"
+                placeholder="Masukkan nama Anda"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="komentar" class="form-label">Komentar</label>
+              <textarea
+                class="form-control"
+                id="komentar"
+                rows="3"
+                placeholder="Tulis komentar Anda..."
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-komen">Kirim Komentar</button>
+          </form>
+        </div>
+
+        <!-- Judul Komentar -->
+        <h5>Comments (1)</h5>
+
+        <!-- Komentar Pertama -->
+        <!-- Form Komentar (Disembunyikan awalnya) -->
+        <div class="collapse mb-4" id="formKomentar">
+          <form>
+            <div class="mb-3">
+              <label for="nama" class="form-label">Nama</label>
+              <input
+                type="text"
+                class="form-control"
+                id="nama"
+                placeholder="Masukkan nama Anda"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="komentar" class="form-label">Komentar</label>
+              <textarea
+                class="form-control"
+                id="komentar"
+                rows="3"
+                placeholder="Tulis komentar Anda..."
+              ></textarea>
+            </div>
+            <div class="d-flex justify-content-end">
+              <button type="submit" class="btn btn-komen-submit">
+                Kirim Komentar
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
 
     <!-- ================================
     section 2 end
@@ -807,6 +880,7 @@
     <!-- Bootstrap JS dan Icons -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <link
       rel="stylesheet"
