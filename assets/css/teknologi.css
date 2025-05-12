@@ -212,10 +212,14 @@ body {
 
 .card-text {
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 3; /* For webkit-based browsers (e.g., Chrome, Safari) */
   -webkit-box-orient: vertical;
   overflow: hidden;
   flex-grow: 1;
+
+  /* Standard property for other browsers that support the specification */
+  line-clamp: 3;
+  box-orient: vertical;
 }
 
 /* --- Card Grid Height Fix --- */
