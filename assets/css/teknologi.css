@@ -186,40 +186,6 @@ body {
 /* ================== */
 
 /* Styling for the carousel and grid cards */
-body {
-  font-family: Arial, sans-serif;
-  margin: 20px;
-  padding: 0;
-}
-
-h1,
-h2 {
-  color: #333;
-}
-
-.article {
-  border: 1px solid #ddd;
-  margin-bottom: 10px;
-  padding: 10px;
-}
-
-.article h3 {
-  margin: 0;
-  font-size: 18px;
-}
-
-.article p {
-  font-size: 14px;
-}
-
-.article a {
-  color: #1a73e8;
-  text-decoration: none;
-}
-
-.article a:hover {
-  text-decoration: underline;
-}
 
 .object-fit-cover {
   object-fit: cover;
@@ -240,33 +206,51 @@ h2 {
   transition: transform 0.5s ease;
 }
 
+.card:hover .card-img-top {
+  transform: scale(1.07);
+}
+
 .card-text {
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  display: box;
-  line-clamp: 3;
+  flex-grow: 1;
 }
 
-.card:hover .card-img-top {
-  transform: scale(1.07);
-}
-
-.carousel-item img {
-  transition: transform 0.5s ease;
-}
-
-.carousel-item:hover img {
-  transform: scale(1.07);
-}
+/* --- Card Grid Height Fix --- */
 
 .card {
-  overflow: hidden; /* Membatasi zoom dalam card */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
-a {
-  text-decoration: none;
+.card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Optional: Stabilize minimum height if needed */
+.card-body {
+  min-height: 122px; /* Sesuaikan jika kamu ingin kestabilan tinggi antar card */
+}
+
+#loadMoreButton {
+  background-color: transparent; /* Tidak ada latar belakang */
+  border: 1px solid #ff66c4; /* Border tombol dengan warna biru */
+  color: #ff66c4; /* Warna teks biru */
+  padding: 10px 20px; /* Padding tombol */
+  font-size: 16px; /* Ukuran font */
+  border-radius: 5px; /* Sudut tombol membulat */
+  transition: color 0.3s; /* Efek transisi untuk perubahan warna teks */
+}
+
+#loadMoreButton:hover {
+  color: #6a0b46; /* Mengubah warna teks menjadi biru gelap saat hover */
 }
 
 /* ================== */
