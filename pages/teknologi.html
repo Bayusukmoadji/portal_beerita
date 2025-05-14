@@ -38,6 +38,7 @@
                 src="../assets/img/logo.png"
                 alt="Portal Berita Logo"
                 class="logo-img"
+                loading="lazy"
               />
             </a>
           </div>
@@ -64,6 +65,7 @@
                 type="search"
                 placeholder="Search..."
                 aria-label="Search"
+                id="searchInputTeknologi"
               />
               <i
                 class="bi bi-search position-absolute top-50 start-0 translate-middle-y ms-3"
@@ -172,6 +174,14 @@
         id="cardGrid"
       ></div>
 
+      <div
+        id="noResultsMessageTeknologi"
+        class="text-center mt-4"
+        style="display: none"
+      >
+        <p>Tidak ada berita teknologi yang cocok dengan pencarian Anda.</p>
+      </div>
+
       <div class="text-center mt-4">
         <button id="loadMoreButton" class="btn">Load More</button>
       </div>
@@ -200,12 +210,14 @@
                 alt="Winnicode Logo"
                 class="img-fluid"
                 style="max-width: 150px"
+                loading="lazy"
               />
               <img
                 src="../assets/img/km.png"
                 alt="Kampus Merdeka Logo"
                 class="img-fluid"
                 style="max-width: 80px"
+                loading="lazy"
               />
             </div>
             <p

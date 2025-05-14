@@ -238,6 +238,7 @@ body {
 }
 
 #loadMoreButton {
+  /* display: none; /* Bisa disembunyikan awal jika mau */
   background-color: transparent;
   border: 1px solid #ff66c4;
   color: #ff66c4;
@@ -250,6 +251,12 @@ body {
 #loadMoreButton:hover {
   background-color: #ff66c4;
   color: white;
+}
+
+#loadMoreButton:disabled {
+  border-color: #777;
+  color: #777;
+  cursor: not-allowed;
 }
 
 /* ================== */
