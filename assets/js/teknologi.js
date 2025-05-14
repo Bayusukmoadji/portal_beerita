@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "https://newsapi.org/v2/top-headlines?category=technology&language=en&pageSize=25&apiKey=107f7e54df6e45fc926f98c205bdae6a";
 
   const techCrunchApiUrl =
-    "https://newsapi.org/v2/everything?sources=techcrunch&language=en&pageSize=25&apiKey=107f7e54df6e45fc926f98c205bdae6a";
+    "https://techcrunch.com/wp-json/wp/v2/posts?per_page=5";
 
   let currentPage = 1;
   const carouselCount = 3;
