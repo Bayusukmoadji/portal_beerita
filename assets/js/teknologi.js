@@ -1,18 +1,18 @@
-// URL API TechCrunch
+// ------------------------ URL API TechCrunch ------------------------
 const techCrunchApiUrl =
   "https://techcrunch.com/wp-json/wp/v2/posts?per_page=8&_embed"; // Ambil 8 berita awal, Anda bisa sesuaikan jumlahnya
 
-// Variabel global untuk menyimpan semua data post dari API
-let allFetchedPosts = [];
+// ------------------------ Variabel Global ------------------------
+let allFetchedPosts = []; // Menyimpan semua data post dari API
 
-// Dapatkan elemen DOM
+// ------------------------ Dapatkan Elemen DOM ------------------------
 const carouselItemsContainer = document.getElementById("carouselItems");
 const cardGridContainer = document.getElementById("cardGrid");
 const searchInput = document.getElementById("searchInputTeknologi"); // Pastikan ID ini ada di HTML Anda
 const noResultsMessage = document.getElementById("noResultsMessageTeknologi"); // Pastikan ID ini ada di HTML Anda
 const loadMoreButton = document.getElementById("loadMoreButton");
 
-// Fungsi untuk membuat dan merender item berita
+// ------------------------ Fungsi untuk Merender Berita ------------------------
 function renderNewsItems(postsToRender) {
   // Kosongkan kontainer sebelum menambahkan item baru
   if (carouselItemsContainer) carouselItemsContainer.innerHTML = "";
@@ -20,6 +20,7 @@ function renderNewsItems(postsToRender) {
 
   let itemsInCarousel = 0;
 
+  // Menampilkan pesan "Tidak ada hasil" jika hasil pencarian kosong
   if (
     postsToRender.length === 0 &&
     searchInput &&
@@ -30,6 +31,7 @@ function renderNewsItems(postsToRender) {
     if (noResultsMessage) noResultsMessage.style.display = "none";
   }
 
+  // ------------------------ Render Carousel dan Grid Cards ------------------------
   postsToRender.forEach((post, index) => {
     const imageUrl =
       post._embedded?.["wp:featuredmedia"]?.[0]?.source_url ||
@@ -43,7 +45,7 @@ function renderNewsItems(postsToRender) {
       day: "numeric",
     });
 
-    // Carousel (ambil 3 pertama dari postsToRender)
+    // ------------------------ Carousel ------------------------
     if (carouselItemsContainer && itemsInCarousel < 3) {
       const carouselItemAnchor = document.createElement("a");
       carouselItemAnchor.href = link;
@@ -52,7 +54,7 @@ function renderNewsItems(postsToRender) {
       const carouselItemDiv = document.createElement("div");
       carouselItemDiv.className = `carousel-item ${
         itemsInCarousel === 0 ? "active" : ""
-      } h-100 position-relative`; // news-item dan news-title bisa ditambahkan di sini jika carousel juga mau dicari dengan cara yang sama
+      } h-100 position-relative`;
 
       carouselItemDiv.innerHTML = `
         <img src="${imageUrl}" class="d-block w-100 h-100 object-fit-cover" alt="${title}" loading="lazy"/>
@@ -66,28 +68,25 @@ function renderNewsItems(postsToRender) {
       itemsInCarousel++;
     }
 
-    // Grid Cards
+    // ------------------------ Grid Cards ------------------------
     if (cardGridContainer) {
       const cardColumn = document.createElement("div");
-      // Setiap kartu akan menjadi satu kolom, ini yang akan di show/hide jika menggunakan logika filter DOM langsung
-      // Namun karena kita re-render, elemen ini akan dibuat ulang sesuai hasil filter.
       cardColumn.className = "col"; // Bootstrap column class
 
       const cardAnchor = document.createElement("a");
       cardAnchor.href = link;
       cardAnchor.target = "_blank"; // Buka di tab baru
-      // Beri class pada anchor jika ingin menargetkan anchor sebagai 'news-item'
-      // atau lebih baik pada 'cardDiv' di bawahnya
 
       const cardDiv = document.createElement("div");
-      cardDiv.className = "card h-100 bg-dark text-white rounded-4"; // news-item bisa ditambahkan di sini jika diperlukan
+      cardDiv.className = "card h-100 bg-dark text-white rounded-4";
 
       cardDiv.innerHTML = `
         <img src="${imageUrl}" class="card-img-top rounded-top-4" alt="${title}" loading="lazy"/>
         <div class="card-body p-2 d-flex flex-column">
-          <p class="card-text news-title">${title}</p> <p class="card-text-excerpt" style="font-size: 0.8rem; opacity: 0.8;">${
-        excerpt.substring(0, 100) + "..."
-      }</p>
+          <p class="card-text news-title" style="font-weight: bold;">${title}</p> <!-- Menambahkan bold pada judul -->
+          <p class="card-text-excerpt" style="font-size: 0.8rem; opacity: 0.8;">${
+            excerpt.substring(0, 100) + "..."
+          }</p>
           <p class="text-white small mt-auto mb-0" style="font-size: 0.7rem">Oleh: <strong>TechCrunch</strong> | ${date}</p>
         </div>
       `;
@@ -98,7 +97,7 @@ function renderNewsItems(postsToRender) {
   });
 }
 
-// Fungsi untuk mengambil data awal
+// ------------------------ Fungsi untuk Mengambil Data Awal ------------------------
 function fetchInitialNews() {
   fetch(techCrunchApiUrl)
     .then((response) => {
@@ -119,7 +118,7 @@ function fetchInitialNews() {
     });
 }
 
-// Event listener untuk input pencarian
+// ------------------------ Event Listener untuk Pencarian ------------------------
 if (searchInput) {
   searchInput.addEventListener("keyup", function (event) {
     const searchTerm = event.target.value.toLowerCase().trim();
@@ -136,9 +135,8 @@ if (searchInput) {
   });
 }
 
-// Panggil fungsi untuk mengambil berita saat halaman dimuat
+// ------------------------ Panggil Fungsi untuk Mengambil Berita Saat Halaman Dimuat ------------------------
 document.addEventListener("DOMContentLoaded", () => {
-  // Pastikan ID searchInputTeknologi dan noResultsMessageTeknologi ada di HTML teknologi.html Anda
   if (!document.getElementById("searchInputTeknologi")) {
     console.warn("Element dengan ID 'searchInputTeknologi' tidak ditemukan.");
   }
@@ -150,7 +148,7 @@ document.addEventListener("DOMContentLoaded", () => {
   fetchInitialNews();
 });
 
-// Logika untuk Tombol Load More (Perlu pengembangan lebih lanjut dengan pagination API)
+// ------------------------ Logika Tombol Load More (Pagination) ------------------------
 if (loadMoreButton) {
   let currentPage = 1; // Halaman saat ini
   const postsPerPage = 8; // Sesuaikan dengan per_page di URL API awal
@@ -186,8 +184,6 @@ if (loadMoreButton) {
           }
         } else {
           loadMoreButton.textContent = "Tidak ada berita lagi";
-          // Tidak perlu men-disable secara permanen, mungkin ada berita baru nanti
-          // Tapi untuk sesi ini, tidak ada lagi.
         }
       })
       .catch((error) => {

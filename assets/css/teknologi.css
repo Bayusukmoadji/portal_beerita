@@ -220,6 +220,14 @@ body {
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+
+  /* Standard property for better compatibility */
+  display: block;
+  -webkit-line-clamp: 3; /* WebKit browsers */
+  line-clamp: 3; /* Standardized property */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .card {
