@@ -190,6 +190,33 @@ body {
 /* ================== */
 
 /* Styling for the carousel and grid cards */
+/* General Styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: inherit;
+}
+
+/* Hero Carousel */
+.hero-carousel-wrapper {
+  max-width: 900px;
+  height: 500px;
+}
+
+#heroCarousel .carousel-item img {
+  transition: transform 0.5s ease;
+}
+
+#carouselItems > a:hover .carousel-item img {
+  transform: scale(1.07);
+}
+
+#heroCarousel .carousel-item {
+  overflow: visible; /* Atau biarkan default, tergantung efek yang diinginkan dengan rounded-4 parent */
+}
 
 .object-fit-cover {
   object-fit: cover;
@@ -200,10 +227,14 @@ body {
   height: 100%;
   pointer-events: none;
   display: flex;
-  align-items: flex-end;
-  padding: 1.5rem;
 }
 
+#heroCarousel .card-img-overlay .h5,
+#heroCarousel .card-img-overlay .small {
+  width: 100%;
+}
+
+/* Card Grid */
 .card-img-top {
   object-fit: cover;
   height: 200px;
@@ -220,14 +251,8 @@ body {
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-
-  /* Standard property for better compatibility */
-  display: block;
-  -webkit-line-clamp: 3; /* WebKit browsers */
-  line-clamp: 3; /* Standardized property */
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  display: block; /* atau -webkit-box */
+  line-clamp: 3;
 }
 
 .card {
@@ -245,8 +270,22 @@ body {
   min-height: 122px;
 }
 
+.news-title {
+  font-size: 0.9rem;
+}
+
+.card-text-excerpt {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+.time-ago {
+  font-size: 0.7rem;
+  opacity: 0.7;
+}
+
+/* Load More Button */
 #loadMoreButton {
-  /* display: none; /* Bisa disembunyikan awal jika mau */
   background-color: transparent;
   border: 1px solid #ff66c4;
   color: #ff66c4;
@@ -267,6 +306,22 @@ body {
   cursor: not-allowed;
 }
 
+/* No Results Message */
+.no-results-message {
+  display: none;
+}
+
+/* Error Messages */
+.text-danger {
+  color: #dc3545 !important; /* Bootstrap's danger color */
+}
+.p-3 {
+  padding: 1rem !important;
+}
+.text-center {
+  text-align: center !important;
+}
+
 /* ================== */
 /* content styling end */
 /* ================== */
@@ -274,8 +329,39 @@ body {
 /* ================== */
 /* footer styling*/
 /* ================== */
+
 .listfoot a:hover {
   color: #ff66c4 !important;
+}
+
+.footer .col-md-4.text-center.text-md-start {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Teks "Follow us" */
+.footer .col-md-4 .fw-semibold.mb-3 {
+  text-align: center;
+  margin-bottom: 0.75rem;
+}
+
+/* Grup ikon sosial media */
+.social-icons-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Setiap baris ikon sosial media */
+.social-icons-row {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+.social-icons-row:last-child {
+  margin-bottom: 0;
 }
 /* ================== */
 /* footer Styling end*/
