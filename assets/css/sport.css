@@ -1,0 +1,368 @@
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #000;
+}
+/* ================== */
+/* Navbar Styling */
+/* ================== */
+/* Tombol Daftar */
+.navbar .btn-register {
+  background-color: #ff66c4;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 10px;
+  border: none;
+  padding: 10px 20px;
+}
+
+.navbar .btn-register:hover {
+  background-color: #a84286;
+}
+
+/* Tombol Masuk */
+.navbar .btn-signin {
+  background-color: #38b6ff;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 10px;
+  border: none;
+  padding: 10px 20px;
+}
+
+.navbar .btn-signin:hover {
+  background-color: #1e7eb6;
+}
+
+/* Shadow effect */
+.navbar .btn-register.shadow-lg,
+.navbar .btn-signin.shadow-lg {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Garis pemisah menu */
+.garis {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 999;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Nav pills styling */
+.nav-pills .nav-link {
+  color: black;
+  font-weight: 200;
+  font-size: 15px;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.nav-pills .nav-link:hover,
+.nav-pills .nav-link.active {
+  color: #ff66c4;
+  background-color: transparent;
+}
+
+.nav-pills {
+  margin-bottom: 0;
+}
+
+.nav-pills .nav-item {
+  margin-right: 12px;
+}
+
+/* Search bar */
+.navbar .form-control {
+  border: 1px solid black;
+}
+
+/* Logo styling */
+.logo-img {
+  height: 45px;
+}
+/* ================== */
+/* Responsive */
+/* ================== */
+
+@media (max-width: 768px) {
+  /* Logo di kiri */
+  .navbar .navbar-brand {
+    margin-left: 0;
+  }
+
+  /* Tombol di kanan */
+  .navbar .col-6.col-lg-4.d-flex.justify-content-end {
+    justify-content: flex-end;
+  }
+
+  /* Ukuran tombol */
+  .navbar .btn-register,
+  .navbar .btn-signin {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  /* Search bar di bawah */
+  .navbar .col-12.col-lg-4.d-flex {
+    justify-content: center;
+  }
+
+  .navbar .form-control {
+    width: 100%;
+  }
+
+  /* Pembungkus menu scroll */
+  .nav-scroll-wrapper {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .nav-scroll-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Menu scroll horizontal */
+  .nav-pills {
+    display: flex;
+    flex-wrap: nowrap;
+    width: max-content;
+    padding-bottom: 10px;
+  }
+
+  .nav-pills .nav-item {
+    flex: 0 0 auto;
+    margin-right: 10px;
+  }
+
+  .nav-pills .nav-link {
+    white-space: nowrap;
+    font-size: 14px;
+  }
+
+  .nl {
+    padding-top: 10px;
+  }
+}
+
+@media (min-width: 769px) {
+  .navbar .col-12.col-lg-4.d-flex {
+    justify-content: center;
+  }
+
+  .navbar-brand {
+    padding-left: 0;
+    margin-left: 0;
+  }
+
+  .navbar .navbar-brand {
+    text-align: left;
+    margin-top: 20px;
+  }
+
+  .navbar .col-12.col-lg-4.d-flex:last-child {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .nav-scroll-wrapper {
+    overflow: visible;
+  }
+
+  .nav-pills {
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
+
+/* ================== */
+/* Navbar Styling end*/
+/* ================== */
+
+/* ================== */
+/* content styling */
+/* ================== */
+
+/* Styling for the carousel and grid cards */
+/* General Styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: inherit;
+}
+
+/* Hero Carousel */
+.hero-carousel-wrapper {
+  max-width: 900px;
+  height: 500px;
+}
+
+#heroCarousel .carousel-item img {
+  transition: transform 0.5s ease;
+}
+
+#carouselItems > a:hover .carousel-item img {
+  transform: scale(1.07);
+}
+
+#heroCarousel .carousel-item {
+  overflow: visible; /* Atau biarkan default, tergantung efek yang diinginkan dengan rounded-4 parent */
+}
+
+.object-fit-cover {
+  object-fit: cover;
+}
+
+.gradient-overlay {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0));
+  height: 100%;
+  pointer-events: none;
+  display: flex;
+}
+
+#heroCarousel .card-img-overlay .h5,
+#heroCarousel .card-img-overlay .small {
+  width: 100%;
+}
+
+/* Card Grid */
+.card-img-top {
+  object-fit: cover;
+  height: 200px;
+  transition: transform 0.5s ease;
+}
+
+.card:hover .card-img-top {
+  transform: scale(1.07);
+}
+
+.card-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block; /* atau -webkit-box */
+  line-clamp: 3;
+}
+
+.card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 122px;
+}
+
+.news-title {
+  font-size: 0.9rem;
+}
+
+.card-text-excerpt {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+.time-ago {
+  font-size: 0.7rem;
+  opacity: 0.7;
+}
+
+/* Load More Button */
+#loadMoreButton {
+  background-color: transparent;
+  border: 1px solid #ff66c4;
+  color: #ff66c4;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+#loadMoreButton:hover {
+  background-color: #ff66c4;
+  color: white;
+}
+
+#loadMoreButton:disabled {
+  border-color: #777;
+  color: #777;
+  cursor: not-allowed;
+}
+
+/* No Results Message */
+.no-results-message {
+  display: none;
+}
+
+/* Error Messages */
+.text-danger {
+  color: #dc3545 !important; /* Bootstrap's danger color */
+}
+.p-3 {
+  padding: 1rem !important;
+}
+.text-center {
+  text-align: center !important;
+}
+
+/* ================== */
+/* content styling end */
+/* ================== */
+
+/* ================== */
+/* footer styling*/
+/* ================== */
+
+.listfoot a:hover {
+  color: #ff66c4 !important;
+}
+
+.footer .col-md-4.text-center.text-md-start {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Teks "Follow us" */
+.footer .col-md-4 .fw-semibold.mb-3 {
+  text-align: center;
+  margin-bottom: 0.75rem;
+}
+
+/* Grup ikon sosial media */
+.social-icons-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Setiap baris ikon sosial media */
+.social-icons-row {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+.social-icons-row:last-child {
+  margin-bottom: 0;
+}
+/* ================== */
+/* footer Styling end*/
+/* ================== */
